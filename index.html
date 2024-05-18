@@ -1,2 +1,37 @@
-cual es el error en este codigo: 
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"><meta name="theme-color" content="#000000"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3573324738855745" crossorigin="anonymous"></script><meta name="description" content="Your company static or mobile geofence strategy"><meta name="keywords" content="Maps, Geofence, Vehicle tracking, Parking, All over the world; Spot, Dot"><meta name="author" content="camarasdefotodeteccion"><meta name="robots" content="index, follow"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"><title>Refactorii</title><script src="https://code.jquery.com/jquery-1.9.1.js"></script><script>function postlog(){$.ajax({url:"/log",method:"POST",data:{user_lat:1,user_lon:2},success:function(o){console.log("ok")},error:function(o){console.log("Failed")}})}</script><link href="/static/css/main.95e85269.css" rel="stylesheet"></head><body onload="postlog()"><noscript>You need to enable JavaScript to run this app.</noscript><div id="root" style="text-align:center"></div><script type="text/javascript" src="/static/js/main.6aca7989.js"></script></body></html>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" 
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <meta name="theme-color" content="#000000">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3573324738855745" 
+      crossorigin="anonymous"></script><meta name="description" content="Your company static or mobile geofence strategy">
+    <meta name="keywords" content="Maps, Geofence, Vehicle tracking, Parking, All over the world; Spot, Dot">
+    <meta name="author" content="camarasdefotodeteccion">
+    <meta name="robots" content="index, follow">
+    <link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <title>Refactorii</title>
+   <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script>
+        function postlog() {
+            // Obtén los datos que deseas enviar al servidor (por ejemplo, latitud y longitud del usuario)
+            const userLat = 1;
+            const userLon = 2;
+
+            // Realiza una solicitud AJAX para enviar los datos al servidor
+            $.ajax({
+                url: "/log", // URL del endpoint en tu servidor
+                method: "POST",
+                data: { user_lat: userLat, user_lon: userLon }, // Datos a enviar
+                success: function (response) {
+                    console.log("Datos enviados correctamente:", response);
+                },
+                error: function (error) {
+                    console.error("Error al enviar datos:", error);
+                }
+            });
+        }
+    </script>
+    <link href="/static/css/main.95e85269.css" rel="stylesheet"></head><body onload="postlog()"><noscript>You need to enable JavaScript to run this app.</noscript><div id="root" style="text-align:center"></div><script type="text/javascript" src="/static/js/main.6aca7989.js"></script></body></html>
